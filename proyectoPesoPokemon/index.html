@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-------------LINKEAR CSS---------------------->
+        <link rel="stylesheet" href="styles/styles.css" />
+
+        <!-------------LINKEAR SCRIPT---------------------->
+        <script src="scripts/scripts.js"></script>
+
+        <meta charset="utf-8">
+        <title>¿Cuánto pesa tú Pokémon?</title>
+        <link rel="icon" href="img/Poké_Ball_icon.svg">
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1 style="text-decoration:underline;">¿Cuánto pesa tú Pokémon?</h1>
+            <br>
+            <div id="fotoAsh">
+                <img src="img/ashKetchum.png" alt="Ash Ketchum Pointing PNG" width="200px">
+            </div>
+
+            <!-- Contenedor que almacena un mensaje de error, que aparece al elegir un Pokémon inexistente. -->
+            <div id="contenedorErrorWrapper" style="display:none;">
+                <div id="contenedorError">
+                    <h2>Pokémon erróneo, ¡asegúrate de escribirlo bien!</h2>
+                </div>
+                <br>
+                <img src="img/sad-pikachu.gif" width="300px" style="border-radius:120px">
+            </div>
+
+            <!-- Contenedor de la carta Pokémon que se muestra al elegir un Pokémon existente. -->
+            <div class="cartaPokemon" id="contenedorCartaPokemon">
+                <div class="tituloCarta">
+                    <h2 id="idNombrePokemon"></h2>
+                </div>
+                <div class="imagenCarta">
+                    <img id="fotoCarta">
+                </div>
+                <div id="pesoCarta">
+                    <h1 id="idPesoPokemon"></h1>
+                </div>
+            </div>
+            <br>
+
+            <!-- Contenedor que alberga el formulario y botón utilizados para la búsqueda. Además permite enviar la búsqueda con la tecla Enter. -->
+            <div class="container">
+                <div class="search_wrap search_wrap_1">
+                    <!-- Return false onSubmit en el form para evitar que la página se recargue y al soltar la tecla enter activa el click en el botón. -->
+                    <form class="search_box" onSubmit="return false;">
+                        <input id="nombrePokemon" type="text"  name="nombrePokemon" placeholder="¡Elige un Pokémon!"
+                        onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('botonForm').click()">
+                        <br>
+                        <div class="btn btn_common">
+                            <input id="botonForm" type="button" onclick="cargarPokemon()"><img src="img/searchIcon.png" width="30px" class="imagenBusqueda"></input>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>
