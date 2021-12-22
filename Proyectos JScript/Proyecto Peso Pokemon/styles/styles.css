@@ -1,0 +1,161 @@
+* {
+    font-family: "Roboto",arial,sans-serif;
+    box-sizing: border-box;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 98.78%;
+    width: 100%;
+    background: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 100%;
+    line-height: 150%;
+    margin-bottom: 0.75em;
+    /* Background del mismo color que la parte baja del fondo. Arreglo fácil para que no se vea blánco debajo de la foto de fondo sin repetirla. */
+    background-color: #80af72;
+}
+#botonForm:hover{
+    border: 2px solid #5f5f5f;
+    box-shadow: 0px 0px 0px 1px rgb(34, 34, 37);
+    -webkit-animation: anim-shadow .3s forwards;
+            animation: anim-shadow .3s forwards;
+}
+@-webkit-keyframes anim-shadow{
+    100%{
+        box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0)
+    }
+}
+@keyframes anim-shadow{
+    100%{
+        box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0)
+    }
+}
+input[type="text"][placeholder="¡Elige un Pokémon!"] {
+    text-align: center;
+}
+.container #nombrePokemon{
+	border: 0;
+	outline: none;
+	color: #8b7d77;
+}
+.search_wrap{
+	width: 500px;
+	margin: 38px auto;
+}
+.search_wrap .search_box{
+	position: relative;
+	width: 500px;
+	height: 60px;
+}
+.search_wrap .search_box #nombrePokemon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	border-radius: 3px;
+	font-size: 18px;
+}
+.search_wrap .search_box .btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 100%;
+	background: #7690da;
+	z-index: 1;
+	cursor: pointer;
+}
+.search_wrap .search_box .btn:hover{
+	background: #708bd2;	
+}
+.search_wrap .search_box .btn.btn_common #botonForm{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+	font-size: 20px;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(#ff0000 50%, #ffffff 50%);  
+    border: 2px solid #000000;
+    padding: 20px 0px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    color: #15295e;
+    font-family: "Roboto",arial,sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .3s;
+}
+.search_wrap.search_wrap_1 .search_box .btn{
+	right: 0;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.search_wrap.search_wrap_1 .search_box #nombrePokemon{
+	padding-right: 80px;
+}
+.imagenBusqueda{
+    position:absolute;
+    top: 16px;
+    left: 16px;
+    pointer-events: none
+}
+#idNombrePokemon{
+    text-decoration: underline;
+    padding-top: 18px;
+    padding-left:60px;
+}
+.cartaPokemon {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 74px 300px 80px;
+    grid-template-areas: "titulo" "imagen" "peso";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    margin:0 auto;
+    width:300px;
+    display: none;
+}
+.tituloCarta {
+    grid-area: titulo;
+}
+.imagenCarta {
+    grid-area: imagen;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.fotoCarta{
+    width: 300px;
+    height: 300px;
+}
+#pesoCarta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 10px;
+    background: #ff0000;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#contenedorError{
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 50px;
+    color: #D8000C;
+    font-weight: bold;
+    background-color: #FFBABA;
+    margin:0 auto;
+    width: 500px;
+}
