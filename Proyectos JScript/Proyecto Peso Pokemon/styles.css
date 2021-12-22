@@ -1,0 +1,113 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+* {
+    font-family: "Roboto",arial,sans-serif;
+    box-sizing: border-box;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 98.86%;
+    width: 100%;
+    background: url("https://i.pinimg.com/originals/7c/67/8b/7c678bffd31dc92dc80d95d471b0e83d.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 100%;
+    line-height: 150%;
+    margin-bottom: 0.75em;
+}
+.pkmnFont{
+    font-family: 'Pokemon Solid', sans-serif;
+}
+.titulo{
+    margin: 5px;
+}
+.fas:hover{
+    border: 2px solid #5f5f5f;
+    box-shadow: 0px 0px 0px 1px rgb(34, 34, 37);
+    animation: anim-shadow .3s forwards;
+}
+@keyframes anim-shadow{
+    100%{
+        box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0)
+    }
+}
+input[type="text"][placeholder="¡Elige un pokémon!"] {
+    text-align: center;
+}
+.container .input{
+	border: 0;
+	outline: none;
+	color: #8b7d77;
+}
+.search_wrap{
+	width: 500px;
+	margin: 38px auto;
+}
+.search_wrap .search_box{
+	position: relative;
+	width: 500px;
+	height: 60px;
+}
+.search_wrap .search_box .input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	border-radius: 3px;
+	font-size: 18px;
+}
+.search_wrap .search_box .btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 100%;
+	background: #7690da;
+	z-index: 1;
+	cursor: pointer;
+}
+.search_wrap .search_box .btn:hover{
+	background: #708bd2;	
+}
+.search_wrap .search_box .btn.btn_common .fas{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+	font-size: 20px;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(#ff0000 50%, #ffffff 50%);  
+    border: 2px solid #000000;
+    padding: 20px 0px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    color: #15295e;
+    font-family: "Roboto",arial,sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .3s;
+}
+.search_wrap.search_wrap_1 .search_box .btn{
+	right: 0;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.search_wrap.search_wrap_1 .search_box .input{
+	padding-right: 80px;
+}
+.imagenBusqueda{
+    position:absolute;
+    top: 16px;
+    left: 16px;
+    pointer-events: none
+}
+.imagenPokemon{
+    height: 200px;
+}
+.nombrePokemonData{
+    text-decoration: underline;
+}
