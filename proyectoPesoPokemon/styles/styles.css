@@ -109,7 +109,6 @@ input[type="text"][placeholder="¡Elige un Pokémon!"] {
 #idNombrePokemon{
     text-decoration: underline;
     padding-top: 18px;
-    padding-left:60px;
 }
 .cartaPokemon {
     display: grid;
