@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <!-------------LINKEAR CSS---------------------->
-        <link rel="stylesheet" href="styles/styles.css" />
-
-        <!-------------LINKEAR SCRIPT---------------------->
-        <script src="scripts/scripts.js"></script>
-
         <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/styles.css" />
+        <script src="scripts/scripts.js"></script>
         <title>¿Cuánto pesa tú Pokémon?</title>
         <link rel="icon" href="img/Poké_Ball_icon.svg">
     </head>
@@ -47,9 +43,7 @@
                 <div class="search_wrap search_wrap_1">
                     <!-- Return false onSubmit en el form para evitar que la página se recargue y al soltar la tecla enter activa el click en el botón. -->
                     <form class="search_box" onSubmit="return false;">
-                        <input id="nombrePokemon" type="text"  name="nombrePokemon" placeholder="¡Elige un Pokémon!"
-                        onkeydown = "if (event.keyCode == 13)
-                        document.getElementById('botonForm').click()">
+                        <input id="nombrePokemon" type="search"  name="nombrePokemon" placeholder="¡Elige un Pokémon!" onsearch="document.getElementById('botonForm').click()">
                         <br>
                         <div class="btn btn_common">
                             <input id="botonForm" type="button" onclick="cargarPokemon()"><img src="img/searchIcon.png" width="30px" class="imagenBusqueda"></input>
