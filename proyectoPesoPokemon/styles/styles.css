@@ -32,9 +32,6 @@ html,body {
         box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0)
     }
 }
-input[type="text"][placeholder="¡Elige un Pokémon!"] {
-    text-align: center;
-}
 .container #nombrePokemon{
 	border: 0;
 	outline: none;
