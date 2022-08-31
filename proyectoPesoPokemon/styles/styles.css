@@ -13,7 +13,7 @@ html,body {
     font-size: 100%;
     line-height: 150%;
     margin-bottom: 0.75em;
-    /* Background del mismo color que la parte baja del fondo. Arreglo fácil para que no se vea blánco debajo de la foto de fondo sin repetirla. */
+    /* Background del mismo color que la parte baja del fondo para que no se vea blanco debajo de la foto de fondo sin repetirla. */
     background-color: #80af72;
 }
 input[type="search"]::placeholder{
